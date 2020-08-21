@@ -210,7 +210,7 @@ class Encoder(layers.Layer):
 
 
 class Decoder(layers.Layer):
-    """Build encoder from specified arch"""
+    """Build Dencoder from specified arch"""
 
     def __init__(self, n_channels, name="decoder", **kwargs):
         super(Decoder, self).__init__(name=name, **kwargs)
