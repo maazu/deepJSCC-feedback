@@ -22,15 +22,15 @@ import os
 print(os.getcwd())
 !ls
 ```
-By defaut google collab run in /content in order save our progress, we will store the data in our google drive. <br>
+By defaut google collab run in /content in order save our progress, we will store all the data into our google drive. <br>
 Run this code to mount your google drive
 <br>
 ```
 from google.colab import drive
 drive.mount('/content/drive')
 ```
-Once the drive is mounted you will drive folder in the files sections 
-change your current working directory by running this code cell
+Once the drive is mounted you will drive see a new folder in the files sections on left side of the window.
+You will now need to change your current working directory by running this code cell
 
 ```
 %cd /content/drive/My Drive/Colab Notebooks/
@@ -42,7 +42,7 @@ To fetch the repo data directly from kurka's git
 ```
 
 Next we will assign ourself a GPU.<br>
-Click the Edit Menu then click to Notebook Settings in change the Hardware setting to GPU -> click save. 
+Click Edit in the menu located on the top left of the window, then click to Notebook Settings then change the Hardware setting to GPU -> click save. 
 <br>
 Congratualtion ! You have done alot ! but we still need to few more things.
 <br>
@@ -60,7 +60,7 @@ Once the installation is completed, Make sure you are in the following directory
 #change directory to 
 %cd /content/drive/My Drive/Colab Notebooks/deepJSCC-feedback/
 ```
-Once the tensorlow is installed to check the gpu must be allocated to you the output should produce 1.
+Once tensorflow installations is finshed, you should confirm that a gpu has been be allocated to you by run the following code below, the output should produce 1.
 ```
 import tensorflow as tf
 print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('GPU')))
@@ -69,7 +69,7 @@ print("Num GPUs Available: ", len(tf.config.experimental.list_physical_devices('
 **KURKA Code running examples**
 ---
 
-Now if you have followed all the steps correctly, then you should be run the following following command.
+Now if you have followed all the steps correctly, then you should be able to run the following following command.
 ```
 !python jscc.py --help
 ```
@@ -96,7 +96,7 @@ usage: jscc.py [-h] [-c MY_CONFIG] --conv_depth CONV_DEPTH --n_layers N_LAYERS
                [--target_analysis]
 ```
 
-If the help is working without any error you then you can run this simple command code to fire your modal. So far it's not working well, but this will help you to get started. 
+If the help output is produced without any error, then you can run this simple command code to fire your modal. So far this modal is running on some extent but you see additional errors, you will need to make some changes in the jssc.py file accordingly. I have test this modal on 3 layers and it was working fine however it crashed as I change the image dataset forexample the imagenet dataset is not working properly.
 
 ```
 !python jscc.py --dataset_train kodak --conv_depth 3 --n_layers 3
