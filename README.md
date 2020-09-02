@@ -35,8 +35,8 @@ You will now need to change your current working directory by running this code 
 ```
 %cd /content/drive/My Drive/Colab Notebooks/
 ```
-**YOU SHOULD RUN THIS STEP ONLY IF YOU DON'T have KURKA'S DATA in your directory otherwise skip this step **<br>
-To fetch the repo data directly from kurka's git
+**YOU SHOULD RUN THIS STEP ONLY IF YOU HAVE NOT FETCHED THE THIS REPOSITORY BEFORE**<br>
+This command will fetch the repository into your google drive.
 ```
 ! git clone https://github.com/kurka/deepJSCC-feedback.git 
 ```
